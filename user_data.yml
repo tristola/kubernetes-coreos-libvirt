@@ -87,7 +87,7 @@ coreos:
         LimitNOFILE=1048576
         LimitNPROC=1048576
         ExecStartPre=/bin/mount --make-rprivate /
-        ExecStart=/usr/bin/docker --daemon --storage-driver=btrfs --host=fd:// --bridge=cbr0 --iptables=false
+        ExecStart=/usr/bin/docker --daemon --storage-driver=btrfs --host=fd:// --bridge=cbr0 --iptables=true
 
         [Install]
         WantedBy=multi-user.target
